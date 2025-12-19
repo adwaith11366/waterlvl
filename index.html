@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Water Level Controller – Project Documentation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #222;
+  --accent: #0b486b;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+header {
+  background: var(--accent);
+  color: white;
+  padding: 35px;
+  text-align: center;
+}
+
+section {
+  max-width: 1000px;
+  margin: 22px auto;
+  background: var(--card);
+  padding: 28px;
+  border-radius: 10px;
+}
+
+h2 {
+  color: var(--accent);
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 6px;
+}
+
+.box {
+  background: #eef3f8;
+  padding: 18px;
+  margin: 18px 0;
+  border-left: 6px solid var(--accent);
+}
+
+ul {
+  padding-left: 22px;
+}
+
+.timeline {
+  border-left: 4px solid var(--accent);
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 22px;
+}
+
+.timeline-item span {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Smart Water Level Controller</h1>
+<p>Arduino-based Water Monitoring & Pump Control System</p>
+</header>
+
+<section>
+<h2>📌 What I Am Working On</h2>
+<p>
+I am working on a <strong>smart water level controller system</strong> using an Arduino microcontroller.
+The system monitors the water level in a tank and automatically controls a water pump while
+allowing manual control when required.
+</p>
+<p>
+The main focus of this project is <strong>automation with minimal user input</strong>,
+using a two-button interface for simplicity and reliability.
+</p>
+</section>
+
+<section>
+<h2>🎯 Project Objectives</h2>
+<ul>
+<li>Monitor water level accurately</li>
+<li>Control pump automatically and manually</li>
+<li>Reduce water overflow and dry-run conditions</li>
+<li>Design a simple and user-friendly interface</li>
+</ul>
+</section>
+
+<section>
+<h2>🔗 Wokwi Simulation (Live Project)</h2>
+<div class="box">
+<p>
+The complete working simulation of this project is available on Wokwi:
+</p>
+<p>
+<strong>
+<a href="https://wokwi.com/projects/445625670924003329" target="_blank">
+https://wokwi.com/projects/445625670924003329
+</a>
+</strong>
+</p>
+<p>
+<em>(This link can be edited anytime by replacing the URL above.)</em>
+</p>
+</div>
+</section>
+
+<section>
+<h2>🧠 How the System Works</h2>
+<ul>
+<li>Ultrasonic sensor measures the distance to the water surface</li>
+<li>Arduino converts distance into water level percentage</li>
+<li>System compares current level with stored threshold</li>
+<li>Pump is switched ON or OFF accordingly</li>
+<li>User can override automation using buttons</li>
+</ul>
+</section>
+
+<section>
+<h2>🔘 Two-Button Control Logic</h2>
+
+<div class="box">
+<strong>Button 1 – Mode Selection</strong>
+<ul>
+<li>Toggles between AUTO and MANUAL modes</li>
+</ul>
+</div>
+
+<div class="box">
+<strong>Button 2 – Action Button</strong>
+<ul>
+<li><strong>AUTO:</strong> Saves current water level as minimum threshold</li>
+<li><strong>MANUAL:</strong> Turns pump ON or OFF</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>🧰 Components Used</h2>
+<ul>
+<li>Arduino UNO – main controller</li>
+<li>HC-SR04 Ultrasonic Sensor – water level measurement</li>
+<li>Relay Module / LED – pump control</li>
+<li>Two Push Buttons – user input</li>
+<li>Buzzer – alert system</li>
+<li>LCD Display – system feedback</li>
+</ul>
+</section>
+
+<section>
+<h2>📈 Project Improvement Timeline (Oct–Dec 2025)</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<span>October 2025 – Initial Development</span>
+<p>
+Designed the basic water level detection system using an ultrasonic sensor.
+Tested raw distance measurements and validated sensor accuracy in simulation.
+</p>
+</div>
+
+<div class="timeline-item">
+<span>November 2025 – Automation & Control</span>
+<p>
+Implemented automatic pump control logic based on water level thresholds.
+Added manual override functionality and optimized the two-button interface.
+</p>
+</div>
+
+<div class="timeline-item">
+<span>December 2025 – Optimization & Documentation</span>
+<p>
+Improved system reliability, added alerts and LCD feedback,
+and prepared full project documentation and simulation for submission.
+</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>🔧 Future Improvements</h2>
+<ul>
+<li>Store threshold values in EEPROM</li>
+<li>Add Wi-Fi module for remote monitoring</li>
+<li>Create a mobile/web dashboard</li>
+<li>Add water quality sensors (pH, turbidity)</li>
+<li>Improve enclosure and real hardware deployment</li>
+</ul>
+</section>
+
+<section>
+<h2>📌 Applications</h2>
+<ul>
+<li>Household water tanks</li>
+<li>Agricultural irrigation systems</li>
+<li>Smart buildings</li>
+<li>Embedded systems education</li>
+</ul>
+</section>
+
+<section>
+<h2>🧾 Conclusion</h2>
+<p>
+This project demonstrates a structured approach to solving real-world water management problems
+using embedded systems. The clear development timeline and future scalability make it suitable
+for academic evaluation as well as practical deployment.
+</p>
+</section>
+
+<footer>
+<p>Smart Water Level Controller – Project Documentation</p>
+<p>© 2025</p>
+</footer>
+
+</body>
+</html>
+
